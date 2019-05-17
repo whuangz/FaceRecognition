@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fjU-38-wiE">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--CameraVC-->
+        <scene sceneID="Xaw-Qg-pEO">
+            <objects>
+                <viewController id="fjU-38-wiE" customClass="CameraVC" customModule="FaceLogin" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WlC-ae-rXH"/>
+                        <viewControllerLayoutGuide type="bottom" id="lej-gD-kWs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fpq-vd-2ep">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n4o-Ib-rUi">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EDY-xO-Ctr">
+                                        <rect key="frame" x="145" y="607" width="85" height="52"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="85" id="XMM-Xh-ITj"/>
+                                            <constraint firstAttribute="height" constant="52" id="xWq-xM-W9p"/>
+                                        </constraints>
+                                        <state key="normal" title="Take Picture">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="takePhoto:" destination="fjU-38-wiE" eventType="touchUpInside" id="IfC-G1-826"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="EDY-xO-Ctr" secondAttribute="bottom" constant="8" id="6jd-5T-icJ"/>
+                                    <constraint firstItem="EDY-xO-Ctr" firstAttribute="centerX" secondItem="n4o-Ib-rUi" secondAttribute="centerX" id="MGM-aa-tlh"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="n4o-Ib-rUi" firstAttribute="leading" secondItem="Fpq-vd-2ep" secondAttribute="leading" id="304-co-g2D"/>
+                            <constraint firstItem="n4o-Ib-rUi" firstAttribute="top" secondItem="Fpq-vd-2ep" secondAttribute="top" id="3Uy-M8-06c"/>
+                            <constraint firstItem="lej-gD-kWs" firstAttribute="top" secondItem="n4o-Ib-rUi" secondAttribute="bottom" id="6Ar-dn-Aqm"/>
+                            <constraint firstAttribute="trailing" secondItem="n4o-Ib-rUi" secondAttribute="trailing" id="RYd-cF-6U0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="EDY-xO-Ctr" id="ysP-QN-LTb"/>
+                        <outlet property="cameraView" destination="n4o-Ib-rUi" id="EdD-tA-3Vv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Xl-dO-joj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="68" y="94.902548725637189"/>
+        </scene>
+    </scenes>
+</document>
